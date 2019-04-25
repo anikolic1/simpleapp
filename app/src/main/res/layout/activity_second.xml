@@ -19,7 +19,7 @@
         android:text="@string/second_page"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
-        app:fontFamily="casual"
+        app:fontFamily="@font/architects_daughter"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
