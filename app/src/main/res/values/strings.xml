@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world_o">Hello World!</string>
+    <string name="my_app">This is the start of something great.</string>
+    <string name="button">Next Page</string>
+    <string name="second_page">Enjoy this picture!</string>
+    <string name="second_page_image">Picture of dog</string>
+</resources>
