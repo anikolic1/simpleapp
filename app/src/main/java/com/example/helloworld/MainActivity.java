@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Add a click through Java instead of xml
+        // Add a click through Java instead of XML
         /*
         Button button = findViewById(R.id.button_secret);
         button.setOnClickListener(new View.OnClickListener() {
