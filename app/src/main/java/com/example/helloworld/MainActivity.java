@@ -1,6 +1,9 @@
 package com.example.helloworld;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.preference.DialogPreference;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,11 +34,43 @@ public class MainActivity extends AppCompatActivity {
 
     // Called when user taps the send button
     public void sendMessage(View view){
+
+        // Create intent and find the editText from the type field
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = findViewById(R.id.editText);
         String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+
+        // Create new popup box and set parameters
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+        builder1.setTitle("Warning");
+        builder1.setMessage("You must enter something before sending.");
+        builder1.setCancelable(true);
+
+        // Positive button from popup, just dismiss it
+        builder1.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+
+        // Negative button from popup, just dismiss it too
+        builder1.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+
+        // If the message is empty, show the alert. Otherwise continue
+        AlertDialog alertEmpty = builder1.create();
+        if (!message.equals("")) {
+            intent.putExtra(EXTRA_MESSAGE, message);
+            startActivity(intent);
+        }
+        else {
+            alertEmpty.show();
+        }
     }
 
     // Called when user taps the secret button
