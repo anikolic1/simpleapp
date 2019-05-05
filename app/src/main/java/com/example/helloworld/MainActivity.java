@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         // Create new popup box and set parameters
         AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
         builder1.setTitle("Warning");
-        builder1.setMessage("You must enter something before sending.");
+        builder1.setMessage("You must enter a message before sending.");
         builder1.setCancelable(true);
 
         // Positive button from popup, just dismiss it
