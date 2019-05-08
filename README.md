@@ -1,6 +1,8 @@
 # simpleapp
 ## Getting Started
-You can pull from git using 
+You can download the v1.0.0 .apk file directly from [here.](https://github.com/anikolic1/simpleapp/releases/tag/v1.0.0)
+
+Alternatively, you can pull from git using:
 ```
 git pull https://github.com/anikolic1/simpleapp.git
 ```
