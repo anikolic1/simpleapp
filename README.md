@@ -4,7 +4,7 @@ You can download the v1.0.0 .apk file directly from [here.](https://github.com/a
 
 Alternatively, you can pull from git using:
 ```
-git pull https://github.com/anikolic1/simpleapp.git
+git clone https://github.com/anikolic1/simpleapp.git
 ```
 then build and export the project using your favorite IDE.
 
